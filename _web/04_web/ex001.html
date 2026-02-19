@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+ 
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var d = new Date();
+            var r = 'hoje e dia: '+ d.getDay() + ' de ' + d.getMonth() + ' exatamente as ' + d.getHours() + ':' + d.getMinutes() +':'+ d.getSeconds(); // atribua os resultados dos algoritmos a
+            
+            document.getElementById('resultado').innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>

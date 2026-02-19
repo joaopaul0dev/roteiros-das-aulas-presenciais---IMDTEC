@@ -1,0 +1,2 @@
+abrir o arquivo em que queria inicializar o programa, e detro do console da IDE carregeguei as dependencias do 
+projeto por meio do comando `npm start`.

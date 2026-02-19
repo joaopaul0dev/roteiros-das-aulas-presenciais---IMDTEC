@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação
+        Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    Calcule sua media: <button onclick='obterValor()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        
+
+            function obterValor() {
+                var n1 = prompt('Insira sua primeira nota.');
+                var n2 = prompt('Insira sua segunda nota.');
+                var n3 = prompt('Insira sua terceira nota.');
+
+                if (n1 === null || n2 === null || n3 === null || n1 === "" || n2 === "" || n3 === "") {
+                    document.getElementById('resultado').innerHTML = 'Erro na entrada, insira novamente o valor';
+                    return;
+                }
+
+                n1 = parseFloat(n1);
+                n2 = parseFloat(n2);
+                n3 = parseFloat(n3);
+
+                if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+                    document.getElementById('resultado').innerHTML = 'Erro: insira números válidos';
+                    return;
+                }
+
+                calcularMedia(n1, n2, n3);
+            }
+
+            function calcularMedia(n1, n2, n3) {
+                var media = (n1 + n2 + n3) / 3;
+                if (media < 0 || media > 10) {
+                    document.getElementById('resultado').innerHTML = 'Valor ultrapassou o intervalo permitido (0-10)';
+                    return;
+                }
+                verificarResultado(media);
+            }
+
+            function verificarResultado(media) {
+                var resultado;
+                if (media >= 7) {
+                    resultado = "Aprovado com média " + media.toFixed(2);
+                } else if (media >= 3) {
+                    resultado = "Aluno em recuperação, pois a média foi " + media.toFixed(2);
+                } else {
+                    resultado = "Aluno reprovado, pois ficou com média " + media.toFixed(2);
+                }
+                document.getElementById('resultado').innerHTML = resultado;
+            }
+        
+    </script>
+</body>
+
+</html>

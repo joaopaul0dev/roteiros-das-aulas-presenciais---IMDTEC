@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    aperte OK para iniciar
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var numeros = []
+            var contagem = null;
+            var ocorrenciasMaior = -1;
+            do {
+                var a = prompt('insira um valor (0 para parar)');
+                numeros.push(a)
+            } while (a != 0);
+        
+            for (let i = 0; i < numeros.length; i++) {
+                var atual = numeros[i];
+                if (numeros[atual] === undefined) {
+                    contagem = 1
+                } else {
+                    contagem[atual]++
+                }
+                console.log(maior)
+            }
+
+            
+            document.getElementById('resultado').innerHTML = numeros.join(', ') + '<br>' + ' numero que mais repete: ' + maiorIndice + ' ' + 'maior ocorrencias ' + ocorencias;
+        }
+    </script>
+</body>
+
+</html>

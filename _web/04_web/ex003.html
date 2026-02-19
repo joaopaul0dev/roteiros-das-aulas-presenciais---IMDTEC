@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    Insira sua data de nascimento: <input id="a" value=""><br />
+    
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var a = Number(document.getElementById('a').value);
+            var d = new Date();
+            var ano = d.getFullYear() - a
+            
+            var r = `ano atual: ${d.getFullYear()} 
+            'sua data de nascimento e: ${ano}`; 
+            
+            document.getElementById('resultado').innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>
